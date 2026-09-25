@@ -30,13 +30,19 @@ public class App {
             command = input.nextLine();
 
             if (command.equals("a")) {
-                System.out.print("Enter value for A: ");
-                a = Double.parseDouble(input.nextLine());
-            } 
-            else if (command.equals("b")) {
-                System.out.print("Enter value for B: ");
-                b = Double.parseDouble(input.nextLine());
-            }
+    System.out.print("Enter value for A: ");
+    a = Double.parseDouble(input.nextLine());
+}
+else if (command.equals("b")) {
+    System.out.print("Enter value for B: ");
+    b = Double.parseDouble(input.nextLine());
+}
+else if (command.equals("+")) {
+    a = a + b;
+}
+else if (command.equals("-")) {
+    a = a - b;
+}
         }
 
         System.out.println("Goodbye!");
