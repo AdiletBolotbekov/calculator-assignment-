@@ -13,8 +13,8 @@ public class App {
         while (!command.equals("q")) {
             System.out.println();
             System.out.println("Welcome to ChavviCalc!");
-            System.out.println("A = " + a);
-            System.out.println("B = " + b);
+            System.out.printf("A = %.3f%n", a);
+            System.out.printf("B = %.3f%n", b);
             System.out.println();
             System.out.println("a - Enter a value for A");
             System.out.println("b - Enter a value for B");
@@ -31,6 +31,7 @@ public class App {
 
             if (command.equals("a")) {
                 System.out.print("Enter value for A: ");
+
                 try {
                     a = Double.parseDouble(input.nextLine());
                 } catch (NumberFormatException e) {
@@ -39,6 +40,7 @@ public class App {
             }
             else if (command.equals("b")) {
                 System.out.print("Enter value for B: ");
+
                 try {
                     b = Double.parseDouble(input.nextLine());
                 } catch (NumberFormatException e) {
@@ -62,8 +64,8 @@ public class App {
                 }
             }
             else if (command.equals("=")) {
-                System.out.println("A = " + a);
-                System.out.println("B = " + b);
+                System.out.printf("A = %.3f%n", a);
+                System.out.printf("B = %.3f%n", b);
             }
             else if (command.equals("c")) {
                 a = 0;
