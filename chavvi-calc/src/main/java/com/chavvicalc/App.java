@@ -43,6 +43,20 @@ else if (command.equals("+")) {
 else if (command.equals("-")) {
     a = a - b;
 }
+else if (command.equals("*")) {
+    a = a * b;
+}
+else if (command.equals("/")) {
+    if (b != 0) {
+        a = a / b;
+    } else {
+        System.out.println("Error: Cannot divide by zero.");
+    }
+}
+else if (command.equals("c")) {
+    a = 0;
+    b = 0;
+}
         }
 
         System.out.println("Goodbye!");
