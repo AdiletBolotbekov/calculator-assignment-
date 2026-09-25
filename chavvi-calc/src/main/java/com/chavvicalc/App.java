@@ -27,36 +27,51 @@ public class App {
             System.out.println("q - Quit");
             System.out.print("Enter command: ");
 
-            command = input.nextLine();
+            command = input.nextLine().trim();
 
             if (command.equals("a")) {
-    System.out.print("Enter value for A: ");
-    a = Double.parseDouble(input.nextLine());
-}
-else if (command.equals("b")) {
-    System.out.print("Enter value for B: ");
-    b = Double.parseDouble(input.nextLine());
-}
-else if (command.equals("+")) {
-    a = a + b;
-}
-else if (command.equals("-")) {
-    a = a - b;
-}
-else if (command.equals("*")) {
-    a = a * b;
-}
-else if (command.equals("/")) {
-    if (b != 0) {
-        a = a / b;
-    } else {
-        System.out.println("Error: Cannot divide by zero.");
-    }
-}
-else if (command.equals("c")) {
-    a = 0;
-    b = 0;
-}
+                System.out.print("Enter value for A: ");
+                try {
+                    a = Double.parseDouble(input.nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: Please enter a valid number.");
+                }
+            }
+            else if (command.equals("b")) {
+                System.out.print("Enter value for B: ");
+                try {
+                    b = Double.parseDouble(input.nextLine());
+                } catch (NumberFormatException e) {
+                    System.out.println("Error: Please enter a valid number.");
+                }
+            }
+            else if (command.equals("+")) {
+                a = a + b;
+            }
+            else if (command.equals("-")) {
+                a = a - b;
+            }
+            else if (command.equals("*")) {
+                a = a * b;
+            }
+            else if (command.equals("/")) {
+                if (b != 0) {
+                    a = a / b;
+                } else {
+                    System.out.println("Error: Cannot divide by zero.");
+                }
+            }
+            else if (command.equals("=")) {
+                System.out.println("A = " + a);
+                System.out.println("B = " + b);
+            }
+            else if (command.equals("c")) {
+                a = 0;
+                b = 0;
+            }
+            else if (!command.equals("q")) {
+                System.out.println("Error: Invalid command.");
+            }
         }
 
         System.out.println("Goodbye!");
